@@ -1,15 +1,6 @@
-import { Check } from "iconoir-react";
-
 const VideoInfo = ({ info }) => {
-  const {
-    videoTitle,
-    channelUrl,
-    channelAvatarUrl,
-    channelName,
-    channelVerified,
-    viewsCount,
-    publishedAt,
-  } = info;
+  const { videoTitle, channelAvatarUrl, channelName, viewsCount, publishedAt } =
+    info;
   return (
     <div className="flex mt-2">
       <div>

@@ -18,9 +18,10 @@ const VIDEO_DATA = {
     publishedAt: "2 hours ago",
   },
 };
+
 const VideoCard = () => {
   return (
-    <div className="">
+    <div>
       <Thumbnail info={VIDEO_DATA.thumbnail} />
       <VideoInfo info={VIDEO_DATA.info} />
     </div>
