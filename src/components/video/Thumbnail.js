@@ -5,7 +5,7 @@ const Thumbnail = ({ video }) => {
     <div>
       <img
         className="video-thumbnail rounded"
-        src={snippet.thumbnails.maxres.url}
+        src={snippet.thumbnails.maxres?.url || snippet.thumbnails.standard?.url}
         alt="video thumbnail"
       />
     </div>

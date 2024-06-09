@@ -25,7 +25,8 @@ const VideoList = () => {
     channelsData?.items?.forEach((c) => {
       mapData.set(c.id, {
         title: c.snippet.title,
-        imageUrl: c.snippet.thumbnails.high.url,
+        imageUrl:
+          c.snippet.thumbnails.high?.url || c.snippet.thumbnails.standard.url,
       });
     });
 
