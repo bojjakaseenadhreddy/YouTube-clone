@@ -18,7 +18,7 @@ const Header = () => {
           </div>
           <div className="flex items-center ">
             <Youtube color={Colors.RED} />
-            <p className="text-xl pl-1">YouTube</p>
+            <p className="hidden md:block text-xl pl-1">YouTube</p>
           </div>
         </li>
 
