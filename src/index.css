@@ -3,6 +3,16 @@
 @tailwind utilities;
 
 .video-thumbnail {
-  height: 200px;
+  max-height: 200px;
+  width: 100%;
   background-color: grey;
+}
+
+.channel-avatar {
+  max-width: 52px;
+  max-height: 52px;
+}
+
+.views-separator ::before {
+  content: " • ";
 }
