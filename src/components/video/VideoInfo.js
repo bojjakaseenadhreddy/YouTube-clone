@@ -2,8 +2,8 @@ import { numbersToText, dateToText } from "../../utils/HumanReadable";
 
 const VideoInfo = ({ video }) => {
   const { snippet, statistics, channel } = video;
-  const readableViewCount = numbersToText(statistics.viewCount);
-  const readableDate = dateToText(snippet.publishedAt);
+  const readableViewCount = numbersToText(statistics?.viewCount);
+  const readableDate = dateToText(snippet?.publishedAt);
   return (
     <div className="flex mt-2">
       <div>
@@ -18,7 +18,7 @@ const VideoInfo = ({ video }) => {
           <h2 className=" font-bold line-clamp-2">{snippet.title}</h2>
           <p>{channel.title}</p>
           <p className="items-center views-separator">
-            {readableViewCount} views
+            {readableViewCount ? `${readableViewCount} views` : ""}
             <span>{readableDate}</span>
           </p>
         </div>

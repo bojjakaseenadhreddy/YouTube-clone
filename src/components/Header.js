@@ -27,10 +27,10 @@ const Header = () => {
         </li>
 
         <li className="flex justify-between ">
-          <div className="p-2">
+          <div className="p-2 hidden md:block">
             <MediaVideoPlus />
           </div>
-          <div className="p-2">
+          <div className="p-2 hidden md:block">
             <BellNotification />
           </div>
           <div className="p-2">

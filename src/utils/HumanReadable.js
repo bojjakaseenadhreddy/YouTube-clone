@@ -1,4 +1,7 @@
 export const numbersToText = (num) => {
+  if (!num) {
+    return null;
+  }
   let res = "" + num;
   if (num >= 1_000_000_000) {
     const quotient = num / 1_000_000_000;
@@ -39,6 +42,9 @@ const getPostFix = (number) => {
 };
 
 export const dateToText = (date) => {
+  if (!date) {
+    return null;
+  }
   const minutes = (new Date() - new Date(date)) / (SECOND_IN_MILLIS * HOUR);
   let res = "";
   if (minutes <= lessThanHour) {

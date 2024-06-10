@@ -1,12 +1,15 @@
 import { Search } from "iconoir-react";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { search } from "../utils/store/slices/SearchSlice";
 
-const SearchBar = ({ triggerSearch }) => {
+const SearchBar = () => {
   const [searchText, setSearchText] = useState("");
+  const searchDispatch = useDispatch();
 
   const handleInput = (event) => {
     if (event.key === "Enter") {
-      triggerSearch(searchText);
+      searchDispatch(search(searchText));
     } else {
       setSearchText(event.target.value);
     }
@@ -14,7 +17,6 @@ const SearchBar = ({ triggerSearch }) => {
 
   return (
     <div className="flex justify-between relative w-full">
-      {searchText}
       <input
         className="rounded w-full"
         type="text"
@@ -23,7 +25,7 @@ const SearchBar = ({ triggerSearch }) => {
       />
       <div
         className="absolute inset-y-0 right-0 flex items-center px-2"
-        onClick={() => triggerSearch(searchText)}
+        onClick={() => searchDispatch(search(searchText))}
         typeof="submit"
         tabIndex={0}
       >
